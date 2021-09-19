@@ -43,6 +43,13 @@ const userSchema = new mongoose.Schema({
     }]
 })
 
+//Not stored on the database
+userSchema.virtual('tasks', {
+    ref: 'Task',
+    localField: '_id',
+    foreignField: 'owner'
+})
+
 //Mongoose middleware
 userSchema.pre('save', async function(next) {
     const user = this
