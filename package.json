@@ -17,6 +17,6 @@
   },
   "scripts": {
     "start": "node task-manager/src/index.js",
-    "dev": "env-cmd task-manager/config/dev.env nodemon task-manager/src/index.js"
+    "dev": "env-cmd -f ./task-manager/config/dev.env nodemon task-manager/src/index.js"
   }
 }
