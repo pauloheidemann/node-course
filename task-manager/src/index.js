@@ -13,6 +13,16 @@ const port = process.env.PORT || 3000
 //     next()
 // })
 
+const multer = require('multer')
+const upload = multer ({
+    dest: 'images'
+})
+
+app.post('/upload', upload.single('upload'), (req, res) => {
+    console.log(req.body)
+    res.send()
+})
+
 app.use(express.json())
 app.use(UserRouter)
 app.use(TaskRouter)
