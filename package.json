@@ -2,6 +2,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "chalk": "^4.1.0",
+    "env-cmd": "^10.1.0",
     "express": "^4.17.1",
     "hbs": "^4.1.2",
     "jsonwebtoken": "^8.5.1",
@@ -16,6 +17,6 @@
   },
   "scripts": {
     "start": "node task-manager/src/index.js",
-    "dev": "nodemon task-manager/src/index.js"
+    "dev": "env-cmd task-manager/config/dev.env nodemon task-manager/src/index.js"
   }
 }
