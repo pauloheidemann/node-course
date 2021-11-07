@@ -5,6 +5,7 @@
     "env-cmd": "^10.1.0",
     "express": "^4.17.1",
     "hbs": "^4.1.2",
+    "jest": "^27.3.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.9",
     "mongoose": "^5.12.13",
@@ -17,6 +18,7 @@
   },
   "scripts": {
     "start": "node task-manager/src/index.js",
-    "dev": "env-cmd -f ./task-manager/config/dev.env nodemon task-manager/src/index.js"
+    "dev": "env-cmd -f ./task-manager/config/dev.env nodemon task-manager/src/index.js",
+    "test": "jest --watch"
   }
 }
