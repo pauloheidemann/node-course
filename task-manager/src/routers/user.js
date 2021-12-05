@@ -10,18 +10,10 @@ router.post('/users', auth, async(req, res) => {
 
     try {
         await user.save()
-        res.send(user)
+        res.status(201).send(user)
     } catch (e) {
         res.status(400).send(e)
     }
-
-    // user.save().then(() => {
-    //     res.status(201).send()
-    // }).catch((error) => {
-    //     console.log(error)
-    //     res.status(400)
-    //     res.send(error)
-    // })
 })
 
 router.post('/users/login', async (req, res) => {
